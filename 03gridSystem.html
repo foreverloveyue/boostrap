@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>boostrap栅格布局</title>
+    <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        div[class^='col'] {
+            height: 50px;
+            background-color: pink;
+            line-height: 50px;
+            text-align: center;
+            box-shadow: 0 0 1px #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 栅格系统把各种各样的屏幕分成了四类
+    1. 手机   col-xs-*  * 代表几列 *最大是12
+    2. 平板   col-sm-* 
+    3.  普通屏幕 col-md-*
+    4.  超大屏幕  col-lg-*
+     -->
+    <!-- <div class="container">固定宽度布局容器</div> -->
+    <!-- .container-fluid 用于百分比布局  宽度是100% -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 col-md-2">2</div>
+            <div class="col-xs-4 col-md-2">2</div>
+            <div class="col-xs-4 col-md-2">2</div>
+            <div class="col-xs-4 col-md-2">2</div>
+            <div class="col-xs-4 col-md-2">2</div>
+            <div class="col-xs-4 col-md-2">2</div>
+        </div>
+        <!-- 列偏移 -->
+        <div class="row">
+            <div class="col-md-4">4</div>
+            <div class="col-md-4 col-md-offset-4">4</div>
+        </div>
+        <!-- 列嵌套 -->
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="col-md-6">6</div>
+                <div class="col-md-6">6</div>
+            </div>
+        </div>
+        <!-- 列顺序 -->
+        <div class="row">
+            <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
+            <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
+        </div>
+    </div>
+</body>
+<script src="./js/jQuery.min.js"></script>
+<script src="./lib/js/bootstrap.min.js"></script>
+</html>
